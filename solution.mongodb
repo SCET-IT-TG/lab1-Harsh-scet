@@ -1,0 +1,19 @@
+use examDB;
+db.students.insertOne({name: "Harsh"});
+db.students.insertOne({name: "ABC"});
+
+db.students.insertMany([{name: "XYZ", department: "IT", semester: 6, mobile: "9999999999"}]);
+
+db.subjects.insertMany([{course_name: "Nothing", subject_list: ["NOsub1", 
+    "NOsub2"
+]}]);
+
+db.faculty.insertMany([{department: "Nothing", teachers : {name: "NOname1", 
+    experience: 4
+}}]);
+
+db.students.insertMany([{_id: ObjectId(4234324324), name: "gfvre"}]);
+
+db.students.insertMany([{_id: ObjectId("64abc123456789abcdef0001"), name: "4tfgfew"}]);
+
+db.students.insertOne({_id: ObjectId("64abc123456789abcdef0001"), name: "4tfgfew"});
