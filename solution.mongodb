@@ -1,6 +1,5 @@
 use examDB;
-db.students.insertOne({name: "Harsh"});
-db.students.insertOne({name: "ABC"});
+db.students.insertMany([{name: "Harsh"},{name: "ABC"}]);
 
 db.students.insertMany([{name: "XYZ", department: "IT", semester: 6, mobile: "9999999999"}]);
 
