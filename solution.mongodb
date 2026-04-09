@@ -1,18 +1,81 @@
-use examDB;
-db.students.insertMany([{name: "Harsh"},{name: "ABC"}]);
+db = db.getSiblingDB("examDB");
 
-db.students.insertMany([{name: "XYZ", department: "IT", semester: 6, mobile: "9999999999"}]);
+db.students.insertOne({
+  name: "Dev",
+  department: "IT",
+  semester: 4,
+  mobile: "9876543234"
+});
 
-db.subjects.insertMany([{course_name: "Nothing", subject_list: ["NOsub1", 
-    "NOsub2"
-]}]);
+db.students.insertOne({
+  name: "Isabel",
+  department: "CE",
+  semester: 6,
+  mobile: "9876543245"
+});
 
-db.faculty.insertMany([{department: "Nothing", teachers : {name: "NOname1", 
-    experience: 4
-}}]);
+db.students.insertOne({
+  name: "Mike",
+  department: "IT",
+  semester: 5,
+  mobile: "9876543210"
+});
 
-db.students.insertMany([{_id: ObjectId(4234324324), name: "gfvre"}]);
+db.students.insertOne({
+  name: "Rang",
+  department: "IT",
+  semester: 5,
+  mobile: "9476543210"
+});
 
-db.students.insertMany([{_id: ObjectId("64abc123456789abcdef0001"), name: "4tfgfew"}]);
+db.subjects.insertOne({
+  course_name: "B.Tech IT",
+  subject_list: ["Java", "DBMS", "Python", "Web Technology"]
+});
 
-db.students.insertOne({_id: ObjectId("64abc123456789abcdef0001"), name: "4tfgfew"});
+db.faculty.insertOne({
+  department: "IT",
+  teachers: [
+    { name: "Prof. T. Gohil", experience: 21 },
+    { name: "Prof. A. Shah", experience: 15 }
+  ]
+});
+
+db.students.insertOne({
+  _id: ObjectId(),
+  name: "Tirth",
+  department: "ME",
+  semester: 3,
+  mobile: "9123456789"
+});
+
+db.students.insertOne({
+  _id: ObjectId("64abc123456789abcdef0001"),
+  name: "Ravi",
+  department: "EE",
+  semester: 2,
+  mobile: "9409640924"
+});
+
+db.students.insertOne({
+  _id: ObjectId("64abc123456789abcdef0001"),
+  name: "Preetal",
+  department: "EE",
+  semester: 2,
+  mobile: "9000000002"
+});
+
+db.subjects.insert({
+  course_name: "BCA",
+  subject_list: ["C", "C++", "OS"]
+});
+
+db.subjects.insert({
+  course_name: "MCA",
+  subject_list: ["AI", "ML", "Cloud"]
+});
+
+db.subjects.insert({
+  course_name: "MBA",
+  subject_list: ["Finance", "HR", "Marketing"]
+});
